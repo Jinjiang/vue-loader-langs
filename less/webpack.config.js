@@ -1,6 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var cssLoaders = ['vue-style-loader', 'css-loader']
+var lessLoaders = cssLoaders.concat('less-loader')
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -10,21 +13,8 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },
-      {
-        test: /\.less$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'less-loader'
-        ],
-      },
+      { test: /\.css$/, use: cssLoaders },
+      { test: /\.less$/, use: lessLoaders },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
