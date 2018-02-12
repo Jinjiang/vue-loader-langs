@@ -1,4 +1,4 @@
-# less
+# less-example
 
 > A Vue.js project
 

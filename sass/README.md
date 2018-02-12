@@ -1,4 +1,4 @@
-# sass
+# sass-example
 
 > A Vue.js project
 
